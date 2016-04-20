@@ -29,6 +29,7 @@ GTAGS
 .#*
 _cache.ham
 
+code/packages/
 */*/obj/x86
 */*/obj/Debug
 */*/obj/Release
