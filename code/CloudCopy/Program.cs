@@ -18,7 +18,7 @@
 
             if (ArgumentsHelper.Parse(args))
             {
-                return RunCommands() ? 1 : 0;
+                return RunCommands() ? 0 : 1;
             }
             else
             {
