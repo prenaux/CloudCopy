@@ -163,5 +163,18 @@
             Uri tmp;
             return Uri.TryCreate(value, UriKind.Absolute, out tmp);
         }
+
+        // Wrapped Console.KeyAvailable because it throws an exception if IO is redirected...
+        public static bool IsKeyAvailable()
+        {
+            try
+            {
+                return Console.KeyAvailable;
+            }
+            catch (InvalidOperationException)
+            {
+                return false;
+            }
+        }
     }
 }

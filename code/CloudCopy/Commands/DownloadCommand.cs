@@ -66,7 +66,7 @@
 
             while (!completed)
             {
-                if (Console.KeyAvailable)
+                if (ArgumentsHelper.IsKeyAvailable())
                 {
                     if (Console.ReadKey(true).Key == ConsoleKey.Escape)
                     {

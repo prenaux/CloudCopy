@@ -5,6 +5,7 @@
     using System.Threading.Tasks;
     using CloudCopy.Azure.Core;
     using CloudCopy.Core;
+    using CloudCopy.Helpers;
 
     public class RemoveCommand : ICommand
     {
@@ -62,7 +63,7 @@
 
             while (!completed)
             {
-                if (Console.KeyAvailable)
+                if (ArgumentsHelper.IsKeyAvailable())
                 {
                     if (Console.ReadKey(true).Key == ConsoleKey.Escape)
                     {
